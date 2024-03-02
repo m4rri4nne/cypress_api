@@ -1,12 +1,8 @@
-Cypress.Commands.add('BaseRequest', (method, baseUrl, bodyRequest='')=>{
+Cypress.Commands.add('BaseRequest', (method, baseUrl, bodyRequest= null)=>{
+    cy.log(bodyRequest);
     cy.request({
         'method': method, 
         'url': baseUrl,
-        'body': bodyRequest == ''? null : bodyRequest 
+        'body': bodyRequest == null ? null : bodyRequest 
     })
-})
-
-Cypress.Commands.add('ResponseBodyValidation', (bodyResponse)=>{
-    expect(bodyResponse.id).to.be.a('int')
-    expect(bodyResponse.title).to.be.a('string')
 })

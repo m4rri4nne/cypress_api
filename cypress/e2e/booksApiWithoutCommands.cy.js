@@ -39,7 +39,7 @@ describe('Books API Testing', ()=>{
         })
     })
 
-    it('Creating a new book - Using command', ()=>{ 
+    it('Creating a new book - Using command 1', ()=>{ 
         const body = {
             id: 100,
             title: "string1",
@@ -52,11 +52,11 @@ describe('Books API Testing', ()=>{
 
         cy.BaseRequest('POST', baseUrl, body).then((response)=>{
             expect(response.status).to.equal(200)
-            cy.ResponseBodyValidation(bodyResponse= response.body)
+            cy.ResponseBodyValidation(response)
         })
     })
 
-    it('Creating a new book - Using commands', ()=>{ 
+    it('Creating a new book - Using commands 2', ()=>{ 
         const body = {
             id: 100,
             title: "string1",
@@ -71,7 +71,7 @@ describe('Books API Testing', ()=>{
         
         cy.get('@response').should((response)=>{
             expect(response.status).to.equal(200)
-            expect(response.body.id).to.be.a('integer')
+            expect(response.body.id).to.equal(100)
         })
     })
 
