@@ -26,7 +26,7 @@ describe('Testing POST Method', ()=>{
         const body = {}
         cy.BaseRequest('POST', baseUrl, body).then((response)=>{
             expect(response.status).to.equal(200)
-            cy.ContractValidation(response.body)
+            cy.ContractValidaton(response.body)
         })
     })
 

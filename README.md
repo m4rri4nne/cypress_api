@@ -1,10 +1,7 @@
 # API Testing using Cypress
+Project of test automation using cypress. For this project, the api used was [Free API Books](https://fakerestapi.azurewebsites.net/index.html). 
 
-| Endpoint | Method | Test | Expected Result |
-| ---------|---------|--------|-------------------|
-| /Books | GET | Search all books with success | Return a status code 200 |
-
-
+## API Specification
 The model of response body for all requests is: 
 ```json
  {
@@ -17,7 +14,7 @@ The model of response body for all requests is:
   }
 ```
 
-Based on Response body, we can do different tests, like: 
+## Test Scenarios 
 
 | Endpoint | Method | Test | Expected Result |
 | ---------|---------|--------|-------------------|
@@ -39,4 +36,18 @@ Using the same strategy to the other endpoints:
 | /Books/{id} | DELETE | Delete a book with success | - Return a status code 200 <br/>|
 | /Books/{id} | DELETE | Delete a book with inexistent ID| - Return a status code 400 <br/>|
 
-There's more tests that you can do related to validation of the body request and the parameters that we need to send, I recommend you try it out! 
+
+## Running the tests locally 
+
+Install the depencencies: 
+```bash 
+npm install 
+```
+
+Running the tests: 
+```bash
+npm run tests
+```
+
+You can check more details about how this project was built [here]() 
+
