@@ -15,12 +15,6 @@ The model of response body for all requests is:
 ```
 
 ## Test Scenarios 
-
-| Endpoint | Method | Test | Expected Result |
-| ---------|---------|--------|-------------------|
-| /Books | GET | Search all books with success | - Return a status code 200<br/> - The body response contain all fields non empty <br/> - The pageCount value is an integer|
-Using the same strategy to the other endpoints: 
-
 | Endpoint | Method | Test | Expected Result |
 | ---------|---------|--------|-------------------|
 | /Books | GET | Search all books with success | - Return a status code 200<br/> - The body response contain all fields non empty <br/> - The pageCount value is an integer|
