@@ -43,5 +43,5 @@ Running the tests:
 npm run tests
 ```
 
-You can check more details about how this project was built [here]() 
+You can check more details about how this project was built [here](https://dev.to/m4rri4nne/api-testing-with-cypress-part-i-2k3i) 
 
