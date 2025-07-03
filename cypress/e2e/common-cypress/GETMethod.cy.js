@@ -1,7 +1,7 @@
-import {RequestService } from '@m4rri4nne/cypress-common';
+import {RequestService, ContractValidator, bookContract } from '@m4rri4nne/cypress-common';
 
 const requestService = new RequestService(); 
-//const validator = new ContractValidator(bookContract); 
+const validator = new ContractValidator(bookContract); 
 
 describe('Testing GET method', ()=>{
     const baseUrl = "https://fakerestapi.azurewebsites.net/api/v1/Books"
@@ -11,7 +11,7 @@ describe('Testing GET method', ()=>{
             url: baseUrl
         }).then((response) =>{
             expect(response.status).to.equal(200)
-            //validator.validate(response.body)
+            validator.validate(response.body)
         })
     })
 })
