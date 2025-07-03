@@ -26,4 +26,23 @@ describe('Testing POST Method', ()=>{
         })
     })
 
+    it('Create a book without body request', ()=>{ 
+        requestService.request({
+            method: 'POST', 
+            url: baseUrl
+        }).then((response) =>{
+            expect(response.status).to.equal(415)
+        })
+    })
+    it('Create a book with empty body request', ()=>{ 
+        requestService.request({
+            method: 'POST', 
+            url: baseUrl,
+            body: body
+        }).then((response) =>{
+            expect(response.status).to.equal(200)
+            validator.validate(response.body)
+        })
+    })
+
 })
