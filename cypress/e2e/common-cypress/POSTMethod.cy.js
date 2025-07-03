@@ -22,7 +22,7 @@ describe('Testing POST Method', ()=>{
         }).then((response) =>{
             expect(response.status).to.equal(200)
             validator.validate(response.body)
-            responseValidation.reponseValidation(body, response.body)
+            responseValidation.responseValidation(body, response.body)
         })
     })
 
